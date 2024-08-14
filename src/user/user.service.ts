@@ -12,11 +12,19 @@ export class UserService {
 
     const passwordHash = await hash(createUserDto.password, saltOrRounds);
 
-    console.log('passwordHashed', passwordHash);
-
-    return {
+    const user: User = {
       ...createUserDto,
-      id: 1,
+      id: this.users.length + 1,
+      password: passwordHash,
     };
+
+    this.users.push(user);
+
+    return user;
+  }
+
+  @Get()
+  async getAllUser(): Promise<User[]> {
+    return this.users;
   }
 }
