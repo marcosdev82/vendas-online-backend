@@ -6,9 +6,9 @@ import { User } from './interfaces/user.interface';
 export class UserService {
   private users: User[] = [];
 
-  async createUser(CreateUserDto: CreateUserDto): Promise<User> {
+  async createUser(createUserDto: CreateUserDto): Promise<User> {
     return {
-      ...CreateUserDto,
+      ...createUserDto,
       id: 1,
     };
   }

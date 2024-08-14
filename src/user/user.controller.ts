@@ -8,9 +8,6 @@ export class UserController {
 
   @Post()
   async createUser(@Body() createUser: CreateUserDto) {
-    return {
-      ...createUser,
-      password: undefined,
-    };
+    return this.userService.createUser(createUser);
   }
 }
