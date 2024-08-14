@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Get, Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dtos/createUser.tdo';
 import { User } from './interfaces/user.interface';
 import { hash } from 'bcrypt';
@@ -24,7 +24,7 @@ export class UserService {
   }
 
   @Get()
-  async getAllUser(): Promise<User[]> {
+  async getAlUser(): Promise<User[]> {
     return this.users;
   }
 }
