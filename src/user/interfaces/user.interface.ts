@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({name: 'user'})
-export interface User {
+export interface UserEntity {
 
   @PrimaryGeneratedColumn('rowid')
   id: number;
