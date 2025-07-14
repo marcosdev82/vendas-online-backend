@@ -7,6 +7,9 @@ export class UserController {
     async createUser(
         @Body() createUser: CreateUser
     ) {
-        return createUser;
+        return {
+            ...createUser,
+            password: undefined,
+        }
     }
 }
