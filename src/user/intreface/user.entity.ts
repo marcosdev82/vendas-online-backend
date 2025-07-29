@@ -12,10 +12,10 @@ export class UserEntity {
     @Column({name: 'email', nullable: false})
     email: string;
 
-    @Column({name: 'phone', nullable: false})
+    @Column({name: 'phone'})
     phone: string;
 
-    @Column({name: 'cpf'})
+    @Column({name: 'cpf', nullable: false})
     cpf: string;
 
     @Column({name: 'password', nullable: false})
